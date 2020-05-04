@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "938447666520",
+    "firebase_url": "https://lol-notification-1f9a3.firebaseio.com",
+    "project_id": "lol-notification-1f9a3",
+    "storage_bucket": "lol-notification-1f9a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938447666520:android:25af70d8088a7b79b4792d",
+        "android_client_info": {
+          "package_name": "com.mjjang.lolnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938447666520-l5aj2ja9csnk7bovh7nprnhgol28nm3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mjjang.lolnotification",
+            "certificate_hash": "1beae4b11caf5f9a8caf04e37c4c28effc1b05cf"
+          }
+        },
+        {
+          "client_id": "938447666520-oafv8mf06grn2ckbal7d7n580hgoqiq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ7FrM5nsyxQtNVF1v9YC8Cz4DXEONsEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938447666520-oafv8mf06grn2ckbal7d7n580hgoqiq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

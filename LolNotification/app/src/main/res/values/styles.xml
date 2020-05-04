@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="Base.Theme.LolNotification" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="colorOnSurface">#000000</item>
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorSecondary">#FFFFFF</item>
+        <item name="android:colorBackground">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.LolNotification" parent="Base.Theme.LolNotification"/>
+
+    <style name="Theme.LolNotification.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.LolNotification.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar"/>
+
+    <style name="TextAppearance.LolNotification.Toolbar.Text" parent="TextAppearance.MaterialComponents.Headline5" >
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+</resources>
