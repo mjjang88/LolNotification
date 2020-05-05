@@ -14,7 +14,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_match"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingEnd="@dimen/card_side_margin"
+            android:paddingStart="@dimen/card_side_margin"
+            android:paddingTop="@dimen/header_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:context="com.mjjang.lolnotification.MainActivity"
+            tools:listitem="@layout/list_item_match"/>
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
