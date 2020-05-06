@@ -9,7 +9,7 @@ data class Match(
     @PrimaryKey val id: String,
     val TeamA: String,
     val TeamB: String,
-    val StartTime: Calendar
+    val StartTime: String
 ) {
 
     override fun toString(): String {

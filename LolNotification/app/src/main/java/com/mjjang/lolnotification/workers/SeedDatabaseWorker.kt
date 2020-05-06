@@ -1,4 +1,4 @@
-package com.mjjang.apartmentsns.workers
+package com.mjjang.lolnotification.workers
 
 import android.content.Context
 import android.util.Log

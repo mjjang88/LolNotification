@@ -19,7 +19,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.LolNotification.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

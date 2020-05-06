@@ -1,4 +1,4 @@
-package com.mjjang.apartmentsns.adapters
+package com.mjjang.lolnotification.adapter
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
