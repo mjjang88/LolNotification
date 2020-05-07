@@ -20,6 +20,7 @@
             android:paddingStart="@dimen/card_side_margin"
             android:paddingTop="@dimen/header_margin"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:context="com.mjjang.lolnotification.MainActivity"
             tools:listitem="@layout/list_item_match"/>
 
