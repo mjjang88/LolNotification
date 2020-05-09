@@ -1,13 +1,13 @@
 <resources>
 
     <style name="Base.Theme.LolNotification" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">#2b2c2d</item>
+        <item name="colorPrimary">#546e7a</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">#000002</item>
+        <item name="colorPrimaryDark">#29434e</item>
         <item name="colorOnSurface">#000000</item>
         <item name="colorAccent">#FF0000</item>
         <item name="colorSurface">#00FF00</item>
-        <item name="colorSecondary">#d0363a</item>
+        <item name="colorSecondary">#d81b60</item>
         <item name="android:colorBackground">#FFFFFF</item>
     </style>
 
