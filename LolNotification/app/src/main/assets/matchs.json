@@ -3,60 +3,60 @@
       "id": "1",
       "TeamA": "T1",
       "TeamB": "DWG",
-      "StartTime": "2020-02-05T17:00:00+09:00"
+      "StartTime": "2020/02/05 17:00"
   },
   {
     "id": "2",
     "TeamA": "KT",
     "TeamB": "GEN",
-    "StartTime": "2020-02-05T18:00:00+09:00"
+    "StartTime": "2020/02/05 18:00"
   },
   {
     "id": "3",
     "TeamA": "SB",
     "TeamB": "APK",
-    "StartTime": "2020-02-06T17:00:00+09:00"
+    "StartTime": "2020/02/06 17:00"
   },
   {
     "id": "4",
     "TeamA": "GRF",
     "TeamB": "AF",
-    "StartTime": "2020-02-06T20:00:00+09:00"
+    "StartTime": "2020/02/06 20:00"
   },
   {
     "id": "5",
     "TeamA": "HLE",
     "TeamB": "T1",
-    "StartTime": "2020-02-07T17:00:00+09:00"
+    "StartTime": "2020/02/07 17:00"
   },
   {
     "id": "6",
     "TeamA": "DRX",
     "TeamB": "KT",
-    "StartTime": "2020-02-07T20:00:00+09:00"
+    "StartTime": "2020/02/07 20:00"
   },
   {
     "id": "7",
     "TeamA": "APK",
     "TeamB": "DWG",
-    "StartTime": "2020-02-08T17:00:00+09:00"
+    "StartTime": "2020/02/08 17:00"
   },
   {
     "id": "8",
     "TeamA": "GEN",
     "TeamB": "GRF",
-    "StartTime": "2020-02-08T20:00:00+09:00"
+    "StartTime": "2020/02/08 20:00"
   },
   {
     "id": "9",
     "TeamA": "SB",
     "TeamB": "DRX",
-    "StartTime": "2020-02-09T17:00:00+09:00"
+    "StartTime": "2020/02/09 17:00"
   },
   {
     "id": "10",
     "TeamA": "AF",
     "TeamB": "HLE",
-    "StartTime": "2020-02-09T20:00:00+09:00"
+    "StartTime": "2020/02/09 20:00"
   }
 ]

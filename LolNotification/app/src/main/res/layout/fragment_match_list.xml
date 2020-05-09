@@ -16,9 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:paddingEnd="@dimen/card_side_margin"
-            android:paddingStart="@dimen/card_side_margin"
-            android:paddingTop="@dimen/header_margin"
+            android:padding="@dimen/margin_normal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:context="com.mjjang.lolnotification.MainActivity"
@@ -41,15 +39,13 @@
                 <LinearLayout
                     android:id="@+id/layout_title"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingStart="@dimen/margin_normal"
-                    android:paddingEnd="@dimen/margin_normal">
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="?attr/actionBarSize"
                         android:layout_weight="1"
-                        android:gravity="center"
+                        android:gravity="start|center_vertical"
                         android:text="@string/app_name"
                         android:textAppearance="?attr/textAppearanceHeadline5" />
 

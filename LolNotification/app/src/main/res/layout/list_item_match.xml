@@ -15,23 +15,17 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/card_side_margin"
-        android:layout_marginEnd="@dimen/card_side_margin"
-        android:layout_marginBottom="@dimen/card_bottom_margin"
-        android:onClick="@{clickListener}"
-        app:cardElevation="@dimen/card_elevation"
-        app:cardPreventCornerOverlap="false">
+        android:onClick="@{clickListener}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/card_side_margin">
 
             <TextView
                 android:id="@+id/text_start_time"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_normal"
-                android:layout_marginBottom="@dimen/margin_normal"
                 android:text="@{match.startTime.toString()}"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:gravity="start"
@@ -41,8 +35,9 @@
 
             <ImageView
                 android:id="@+id/image_team_a"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/match_item_image_width"
                 android:layout_height="@dimen/match_item_image_height"
+                android:layout_marginTop="@dimen/margin_half"
                 android:scaleType="centerCrop"
                 app:logoImage="@{match.teamA}"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,17 +47,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_half"
                 android:text="@{match.teamA}"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:gravity="start"
-                app:layout_constraintStart_toStartOf="@+id/image_team_a"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_start_time"/>
+                app:layout_constraintStart_toEndOf="@+id/image_team_a"
+                app:layout_constraintTop_toTopOf="@+id/image_team_a"/>
 
             <ImageView
                 android:id="@+id/image_team_b"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/match_item_image_width"
                 android:layout_height="@dimen/match_item_image_height"
+                android:layout_marginTop="@dimen/margin_half"
                 android:scaleType="centerCrop"
                 app:logoImage="@{match.teamB}"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +68,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_half"
                 android:text="@{match.teamB}"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:gravity="start"
-                app:layout_constraintStart_toStartOf="@+id/image_team_b"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_team_a"/>
+                app:layout_constraintStart_toEndOf="@+id/image_team_b"
+                app:layout_constraintTop_toTopOf="@+id/image_team_b"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
