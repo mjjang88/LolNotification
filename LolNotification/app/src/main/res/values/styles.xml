@@ -5,10 +5,10 @@
         <item name="colorOnPrimary">#FFFFFF</item>
         <item name="colorPrimaryDark">#29434e</item>
         <item name="colorOnSurface">#000000</item>
-        <item name="colorAccent">#FF0000</item>
-        <item name="colorSurface">#00FF00</item>
-        <item name="colorSecondary">#d81b60</item>
-        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorAccent">#6E608B</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorSecondary">#8B607D</item>
+        <item name="android:colorBackground">#F0F0F0</item>
     </style>
 
     <style name="Theme.LolNotification" parent="Base.Theme.LolNotification"/>

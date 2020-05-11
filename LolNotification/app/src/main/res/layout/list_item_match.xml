@@ -15,6 +15,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.CardView"
         android:onClick="@{clickListener}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,14 +25,35 @@
 
             <TextView
                 android:id="@+id/text_start_time"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{match.startTime.toString()}"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
+
+            <CheckBox
+                android:id="@+id/check_not_recom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:button="@drawable/ic_thumb_down_selector"
+                android:paddingStart="@dimen/margin_half"
+                android:text="@string/zero"
+                app:useMaterialThemeColors="false"/>
+
+            <CheckBox
+                android:id="@+id/check_recom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/check_not_recom"
+                app:layout_constraintTop_toTopOf="parent"
+                android:button="@drawable/ic_thumb_up_selector"
+                android:paddingStart="@dimen/margin_half"
+                android:text="@string/zero"
+                app:useMaterialThemeColors="false"/>
 
             <ImageView
                 android:id="@+id/image_team_a"
@@ -75,6 +97,14 @@
                 app:layout_constraintStart_toEndOf="@+id/image_team_b"
                 app:layout_constraintTop_toTopOf="@+id/image_team_b"/>
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:padding="@dimen/margin_half"
+                android:src="@drawable/ic_video"
+                android:background="@null"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
