@@ -50,6 +50,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/check_not_recom"
                 app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/margin_half"
                 android:button="@drawable/ic_thumb_up_selector"
                 android:paddingStart="@dimen/margin_half"
                 android:text="@string/zero"
