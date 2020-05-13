@@ -19,4 +19,8 @@ data class Match(
     override fun toString(): String {
         return "$TeamA vs $TeamB"
     }
+
+    fun gameNumberToString(): String {
+        return "$GameNumber 세트"
+    }
 }
