@@ -8,7 +8,7 @@ import androidx.room.Query
 
 @Dao
 interface MatchDao {
-    @Query("SELECT * FROM matchs ORDER BY startTime asc")
+    @Query("SELECT * FROM matchs ORDER BY CAST(id AS INTEGER) desc")
     fun getMatchList(): LiveData<List<Match>>
 
     @Query("SELECT * FROM matchs WHERE id = :matchId")
