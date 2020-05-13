@@ -2,6 +2,7 @@ package com.mjjang.lolnotification.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,48 @@ class MatchListAdapter : ListAdapter<Match, RecyclerView.ViewHolder>(MatchDiffCa
             binding.setClickListener {
 
             }
+
+            binding.checkRecom.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+                // 새로 체크가 된 경우
+                if (isChecked) {
+                    if (binding.checkNotRecom.isChecked) {
+                        binding.checkNotRecom.isChecked = false
+
+                        // post checkNotRecom!! --
+                    }
+
+                    // post checkRecom!! ++
+
+                    // preference에 id 등록
+
+                } else {
+
+                    // post checkRecom!! --
+
+                    // preference에 id 해제
+                }
+            })
+
+            binding.checkNotRecom.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+                // 새로 체크가 된 경우
+                if (isChecked) {
+                    if (binding.checkRecom.isChecked) {
+                        binding.checkRecom.isChecked = false
+
+                        // post checkRecom!! --
+                    }
+
+                    // post checkNotRecom!! ++
+
+                    // preference에 id 등록
+
+                } else {
+
+                    // post checkNotRecom!! --
+
+                    // preference에 id 해제
+                }
+            })
         }
 
         fun bind(item: Match) {
