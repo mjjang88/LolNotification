@@ -16,4 +16,7 @@ interface MatchDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(matchs: List<Match>)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOne(match: Match)
 }
