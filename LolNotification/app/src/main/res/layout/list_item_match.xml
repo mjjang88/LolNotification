@@ -52,8 +52,9 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:button="@drawable/ic_thumb_down_selector"
                 android:paddingStart="@dimen/margin_half"
-                android:text="@string/zero"
-                app:useMaterialThemeColors="false"/>
+                android:text="@{match.notRecommendCount}"
+                app:useMaterialThemeColors="false"
+                app:notRecomChecked="@{match.id}"/>
 
             <CheckBox
                 android:id="@+id/check_recom"
@@ -64,8 +65,9 @@
                 android:layout_marginEnd="@dimen/margin_half"
                 android:button="@drawable/ic_thumb_up_selector"
                 android:paddingStart="@dimen/margin_half"
-                android:text="@string/zero"
-                app:useMaterialThemeColors="false"/>
+                android:text="@{match.recommendCount}"
+                app:useMaterialThemeColors="false"
+                app:recomChecked="@{match.id}"/>
 
             <ImageView
                 android:id="@+id/image_team_a"
