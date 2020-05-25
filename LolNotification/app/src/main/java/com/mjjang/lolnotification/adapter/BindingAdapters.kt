@@ -21,18 +21,20 @@ fun bindImageFromTeamName(view: ImageView, teamName: String?) {
 fun bindRecomChecked(view: CheckBox, id: String?) {
     if (!id.isNullOrEmpty()) {
         val result = AppPreference.getRecomChecked(id)
-        view.isChecked = result == 2
+        view.isChecked = result == AppPreference.CHECKED
     } else {
         view.isChecked = false
     }
+    view.isClickable = true
 }
 
 @BindingAdapter("notRecomChecked")
 fun bindNotRecomChecked(view: CheckBox, id: String?) {
     if (!id.isNullOrEmpty()) {
-        val result = AppPreference.getRecomChecked(id)
-        view.isChecked = result == 1
+        val result = AppPreference.getNotRecomChecked(id)
+        view.isChecked = result == AppPreference.CHECKED
     } else {
         view.isChecked = false
     }
+    view.isClickable = true
 }

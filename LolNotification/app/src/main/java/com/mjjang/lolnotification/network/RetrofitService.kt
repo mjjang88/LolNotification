@@ -16,17 +16,17 @@ interface RetrofitService {
 
     @GET("/match/matchid/{matchId}/increcom")
     fun increaseRecomCount(@Path("matchId") matchId : String?
-    ): Call<Void>
+    ): Call<Match>
 
     @GET("/match/matchid/{matchId}/decrecom")
     fun decreaseRecomCount(@Path("matchId") matchId : String?
-    ): Call<Void>
+    ): Call<Match>
 
     @GET("/match/matchid/{matchId}/incnotrecom")
     fun increaseNotRecomCount(@Path("matchId") matchId : String?
-    ): Call<Void>
+    ): Call<Match>
 
     @GET("/match/matchid/{matchId}/decnotrecom")
     fun decreaseNotRecomCount(@Path("matchId") matchId : String?
-    ): Call<Void>
+    ): Call<Match>
 }

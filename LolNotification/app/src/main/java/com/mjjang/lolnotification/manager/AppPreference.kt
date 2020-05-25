@@ -33,11 +33,38 @@ object AppPreference {
         }
     }
 
-    fun putRecomChecked(id: String, value: Int) {
-        preference.edit().putInt(id, value).apply()
+    const val CHECKED = 1
+    const val NOT_CHECKED = 0
+
+    fun putRecomChecked(id: String?, value: Int) {
+        if (id == null) {
+            return;
+        }
+        val key = "recom_$id";
+        preference.edit().putInt(key, value).apply()
     }
 
-    fun getRecomChecked(id: String) : Int {
-        return preference.getInt(id, 0)
+    fun getRecomChecked(id: String?) : Int {
+        if (id == null) {
+            return 0;
+        }
+        val key = "recom_$id";
+        return preference.getInt(key, 0)
+    }
+
+    fun putNotRecomChecked(id: String?, value: Int) {
+        if (id == null) {
+            return;
+        }
+        val key = "notrecom_$id";
+        preference.edit().putInt(key, value).apply()
+    }
+
+    fun getNotRecomChecked(id: String?) : Int {
+        if (id == null) {
+            return 0;
+        }
+        val key = "notrecom_$id";
+        return preference.getInt(key, 0)
     }
 }

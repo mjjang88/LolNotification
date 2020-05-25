@@ -27,7 +27,7 @@ object RetrofitProc {
         LolNotiDBRetrofit.getService().decreaseNotRecomCount(strId).enqueue(CallbackRefreshMatch(strId))
     }
 
-    private fun refreshMatch(strID: String?) {
+    private fun updateMatch(strID: String?) {
         LolNotiDBRetrofit.getService().requestMatchById(strID).enqueue(object : Callback<Match> {
             override fun onFailure(call: Call<Match>, t: Throwable) {
             }
@@ -37,7 +37,7 @@ object RetrofitProc {
                     GlobalScope.launch {
                         response.body()?.let {
                             val database = AppDatabase.getInstance(App.applicationContext())
-                            database.matchDao().insertOne(it)
+                            database.matchDao().updateOne(it)
                         }
                     }
                 }
@@ -45,14 +45,17 @@ object RetrofitProc {
         })
     }
 
-    class CallbackRefreshMatch(private val strId: String?) : Callback<Void> {
-        override fun onFailure(call: Call<Void>, t: Throwable) {
+    class CallbackRefreshMatch(private val strId: String?) : Callback<Match> {
+        override fun onFailure(call: Call<Match>, t: Throwable) {
         }
 
-        override fun onResponse(call: Call<Void>, response: Response<Void>) {
+        override fun onResponse(call: Call<Match>, response: Response<Match>) {
             if (response.isSuccessful) {
                 GlobalScope.launch {
-                    refreshMatch(strId)
+                    response.body()?.let {
+                        val database = AppDatabase.getInstance(App.applicationContext())
+                        database.matchDao().updateOne(it)
+                    }
                 }
             }
         }
