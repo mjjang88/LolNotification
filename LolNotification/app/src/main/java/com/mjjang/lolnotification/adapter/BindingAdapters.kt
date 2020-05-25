@@ -1,6 +1,7 @@
 package com.mjjang.lolnotification.adapter
 
 import android.widget.CheckBox
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.mjjang.lolnotification.R
@@ -37,4 +38,9 @@ fun bindNotRecomChecked(view: CheckBox, id: String?) {
         view.isChecked = false
     }
     view.isClickable = true
+}
+
+@BindingAdapter("isEnabledByLink")
+fun bindEnabledByLink(view: ImageButton, link: String?) {
+    view.isEnabled = !link.isNullOrBlank()
 }

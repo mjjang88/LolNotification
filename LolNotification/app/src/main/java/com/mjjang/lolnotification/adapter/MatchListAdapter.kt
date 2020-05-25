@@ -1,5 +1,7 @@
 package com.mjjang.lolnotification.adapter
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewGroup
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mjjang.lolnotification.data.Match
 import com.mjjang.lolnotification.databinding.ListItemMatchBinding
+import com.mjjang.lolnotification.manager.App
 import com.mjjang.lolnotification.manager.AppPreference
 import com.mjjang.lolnotification.network.RetrofitProc
 
@@ -107,6 +110,16 @@ class MatchListAdapter() : ListAdapter<Match, RecyclerView.ViewHolder>(MatchDiff
 
             binding.checkNotRecom.setOnClickListener {
                 it.isClickable = false
+            }
+
+            binding.btnYoutubeLink.setOnClickListener {
+                if (binding.match != null && !binding.match!!.YouTubeLink.isNullOrEmpty()) {
+                    it.context.startActivity(
+                        Intent(Intent.ACTION_VIEW)
+                            .setData(Uri.parse(binding.match!!.YouTubeLink))
+                            .setPackage("com.google.android.youtube")
+                    )
+                }
             }
         }
 
