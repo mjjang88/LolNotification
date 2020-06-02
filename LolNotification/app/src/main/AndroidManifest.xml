@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LolNotification">
+        <activity android:name=".TutorialActivity"></activity>
+
         <service
             android:name=".MyFireBaseMessagingService"
             android:exported="false">
@@ -20,7 +22,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/Theme.LolNotification.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
