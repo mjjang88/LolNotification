@@ -6,4 +6,9 @@
     <string name="teamalogo">teamALogo</string>
 
     <string name="zero">0</string>
+
+    <string name="tutorial_head">안녕하세요.\n앱을 이용해 주셔서 감사합니다.\n간단히 앱에 대해서 소개할게요.</string>
+    <string name="tutorial_noti">모든 경기를 챙겨볼 시간이 없거나\n 재밌는 경기만 보고 싶은 분들을 위해\n 추천 꿀잼 경기를 알림으로 알려드려요.</string>
+    <string name="tutorial_list">재밌는 경기에는 추천을 꾹 눌러주세요.\n 유튜브 링크를 클릭해서 간편하게 하이라이트를 즐기세요.</string>
+    <string name="tutorial_btn_start">시작하기</string>
 </resources>

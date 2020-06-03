@@ -21,4 +21,6 @@
 
     <dimen name="fab_bottom_padding">72dp</dimen>
 
+    <dimen name="tutorial_font_size">20sp</dimen>
+
 </resources>
