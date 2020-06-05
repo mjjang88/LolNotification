@@ -12,6 +12,12 @@ class TutorialActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView<ActivityTutorialBinding>(this, R.layout.activity_tutorial)
 
+        val background = getDrawable(R.drawable.morgana_crop)
+        background?.let {
+            it.alpha = 100
+            layout_tutorial.background = it
+        }
+
         image_tutorial_close.setOnClickListener {
             finish()
         }

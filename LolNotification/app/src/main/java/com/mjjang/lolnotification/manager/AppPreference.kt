@@ -67,4 +67,14 @@ object AppPreference {
         val key = "notrecom_$id";
         return preference.getInt(key, 0)
     }
+
+    fun putFirstVisited(isVisited: Boolean) {
+        val key = "first_visit"
+        preference.edit().putBoolean(key, isVisited).apply()
+    }
+
+    fun getFirstVisited() : Boolean {
+        val key = "first_visit"
+        return preference.getBoolean(key, true)
+    }
 }

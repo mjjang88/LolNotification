@@ -2,6 +2,7 @@ package com.mjjang.lolnotification.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 @Entity(tableName = "matchs")
 data class Match(
@@ -22,5 +23,9 @@ data class Match(
 
     fun gameNumberToString(): String {
         return "$GameNumber 세트"
+    }
+
+    fun startTimeToString(): String {
+        return StartTime.toString()
     }
 }
