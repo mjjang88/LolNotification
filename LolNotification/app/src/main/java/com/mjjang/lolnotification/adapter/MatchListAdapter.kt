@@ -121,6 +121,15 @@ class MatchListAdapter() : ListAdapter<Match, RecyclerView.ViewHolder>(MatchDiff
                     )
                 }
             }
+
+            binding.btnNaverLink.setOnClickListener {
+                if (binding.match != null && !binding.match!!.NaverLink.isNullOrEmpty()) {
+                    it.context.startActivity(
+                        Intent(Intent.ACTION_VIEW)
+                            .setData(Uri.parse(binding.match!!.NaverLink))
+                    )
+                }
+            }
         }
 
         fun bind(item: Match) {

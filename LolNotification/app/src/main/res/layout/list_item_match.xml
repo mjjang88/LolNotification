@@ -124,9 +124,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:padding="@dimen/margin_half"
-                android:src="@drawable/ic_video_selector"
+                android:src="@drawable/ic_youtube_selector"
                 android:background="@null"
                 app:isEnabledByLink="@{match.youTubeLink}"/>
+
+            <ImageButton
+                android:id="@+id/btn_naver_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/btn_youtube_link"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/margin_half"
+                android:padding="@dimen/margin_half"
+                android:src="@drawable/ic_naver_selector"
+                android:background="@null"
+                app:isEnabledByLink="@{match.naverLink}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
