@@ -2,6 +2,7 @@ package com.mjjang.lolnotification.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.text.SimpleDateFormat
 import java.util.*
 
 @Entity(tableName = "matchs")
@@ -26,6 +27,13 @@ data class Match(
     }
 
     fun startTimeToString(): String {
-        return StartTime.toString()
+        val calendar = Calendar.getInstance()
+        calendar.time = DATE_FORMAT.parse(StartTime)
+
+        return "${calendar.get(Calendar.YEAR)}/${calendar.get(Calendar.MONTH) + 1}/${calendar.get(Calendar.DATE)} ${calendar.get(Calendar.HOUR)}시"
+    }
+
+    companion object {
+        private val DATE_FORMAT = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
     }
 }
