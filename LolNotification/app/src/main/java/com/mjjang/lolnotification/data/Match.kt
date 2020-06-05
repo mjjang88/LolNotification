@@ -23,7 +23,7 @@ data class Match(
     }
 
     fun gameNumberToString(): String {
-        return "$GameNumber 세트"
+        return "${GameNumber}세트"
     }
 
     fun startTimeToString(): String {
