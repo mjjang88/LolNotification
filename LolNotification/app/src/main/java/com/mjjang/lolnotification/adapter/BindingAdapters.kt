@@ -14,7 +14,7 @@ fun bindImageFromTeamName(view: ImageView, teamName: String?) {
         val resID = view.resources.getIdentifier(resName, null, view.context.packageName)
         view.setImageResource(resID)
     } else {
-        view.setImageResource(R.drawable.t1)
+        view.setImageResource(R.drawable.lck_logo)
     }
 }
 
