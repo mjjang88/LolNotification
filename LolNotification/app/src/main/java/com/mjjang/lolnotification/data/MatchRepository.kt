@@ -19,8 +19,8 @@ class MatchRepository private constructor(
     fun getMatchList() : LiveData<List<Match>> {
         refreshMatch()
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            //matchDao.getMatchList(LocalDate.now().toString())
-            matchDao.getMatchList(LocalDate.now().plusMonths(1).toString())
+            matchDao.getMatchList(LocalDate.now().toString())
+            //matchDao.getMatchList(LocalDate.now().plusMonths(1).toString())
         } else {
             val dateString = SimpleDateFormat("yyyy-MM-dd").format(Date(System.currentTimeMillis()))
             matchDao.getMatchList(dateString)
