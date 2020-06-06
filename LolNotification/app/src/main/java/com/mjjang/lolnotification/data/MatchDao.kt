@@ -5,7 +5,7 @@ import androidx.room.*
 
 @Dao
 interface MatchDao {
-    @Query("SELECT * FROM matchs where Datetime(StartTime) <= Datetime(:today) ORDER BY CAST(id AS INTEGER) desc")
+    @Query("SELECT * FROM matchs where Date(StartTime) <= Date(:today) ORDER BY CAST(id AS INTEGER) desc")
     fun getMatchList(today: String): LiveData<List<Match>>
 
     @Query("SELECT * FROM matchs WHERE id = :matchId")
