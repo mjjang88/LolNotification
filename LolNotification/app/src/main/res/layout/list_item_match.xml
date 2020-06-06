@@ -21,7 +21,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/card_side_margin">
+            android:padding="@dimen/card_side_margin"
+            app:isEditorRecommend="@{match.isEditorRecommend()}">
 
             <TextView
                 android:id="@+id/text_start_time"

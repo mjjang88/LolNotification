@@ -15,7 +15,8 @@ data class Match(
     val RecommendCount: String,
     val NotRecommendCount: String,
     val YouTubeLink: String?,
-    val NaverLink: String?
+    val NaverLink: String?,
+    val EditorRecommend: String
 ) {
 
     override fun toString(): String {
@@ -31,6 +32,10 @@ data class Match(
         calendar.time = DATE_FORMAT.parse(StartTime)
 
         return "${calendar.get(Calendar.YEAR)}/${calendar.get(Calendar.MONTH) + 1}/${calendar.get(Calendar.DATE)} ${calendar.get(Calendar.HOUR)}시"
+    }
+
+    fun isEditorRecommend(): Boolean {
+        return EditorRecommend.toInt() == 1
     }
 
     companion object {

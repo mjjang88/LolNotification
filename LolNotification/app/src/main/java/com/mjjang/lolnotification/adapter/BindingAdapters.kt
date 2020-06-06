@@ -3,6 +3,7 @@ package com.mjjang.lolnotification.adapter
 import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import com.mjjang.lolnotification.R
 import com.mjjang.lolnotification.manager.AppPreference
@@ -43,4 +44,13 @@ fun bindNotRecomChecked(view: CheckBox, id: String?) {
 @BindingAdapter("isEnabledByLink")
 fun bindEnabledByLink(view: ImageButton, link: String?) {
     view.isEnabled = !link.isNullOrBlank()
+}
+
+@BindingAdapter("isEditorRecommend")
+fun bindEditorRecommend(view: ConstraintLayout, isRecommend: Boolean) {
+    if (isRecommend) {
+        view.setBackgroundResource(R.drawable.list_backgound_recommend)
+    } else {
+        view.background = null
+    }
 }
