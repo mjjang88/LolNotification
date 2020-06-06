@@ -37,6 +37,27 @@ class MatchListFragment : Fragment() {
 
         binding.listMatch.addItemDecoration(RecyclerViewDecoration(resources.getDimension(R.dimen.margin_normal).toInt()))
 
+        (binding.listMatch.adapter as MatchListAdapter).registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
+            override fun onChanged() {
+                super.onChanged()
+                checkEmpty()
+            }
+
+            override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
+                super.onItemRangeInserted(positionStart, itemCount)
+                checkEmpty()
+            }
+
+            override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) {
+                super.onItemRangeRemoved(positionStart, itemCount)
+                checkEmpty()
+            }
+
+            fun checkEmpty() {
+                binding.textEmptyList.visibility = (if (adapter.itemCount == 0) View.VISIBLE else View.GONE)
+            }
+        })
+
         return binding.root
     }
 

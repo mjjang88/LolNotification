@@ -22,6 +22,23 @@
             tools:context="com.mjjang.lolnotification.MainActivity"
             tools:listitem="@layout/list_item_match"/>
 
+        <TextView
+            android:id="@+id/text_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.mjjang.lolnotification.MainActivity"
+            android:background="#F0F0F0"
+            android:text="@string/empty_display_game"
+            android:fontFamily="@font/main_font"
+            android:textStyle="bold"
+            android:textSize="@dimen/tutorial_font_size"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:lineSpacingExtra="20dp"
+            android:visibility="gone"/>
+
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"

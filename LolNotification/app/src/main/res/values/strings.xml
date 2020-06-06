@@ -11,4 +11,9 @@
     <string name="tutorial_noti">모든 경기를 챙겨볼 시간이 없거나\n 재밌는 경기만 보고 싶은 분들을 위해\n 추천 꿀잼 경기를 알림으로 알려드려요.</string>
     <string name="tutorial_list">재밌는 경기에는 추천을 꾹 눌러주세요.\n 유튜브 링크를 클릭해서 간편하게 하이라이트를 즐기세요.</string>
     <string name="tutorial_btn_start">시작하기</string>
+
+    <string name="empty_display_game">보여드릴 경기가 없습니다.\n경기 데이터를 가져오는 중이거나\n시즌 시작 전일 수 있습니다.</string>
+
+    <string name="back_press_message">\"뒤로가기\"를 한번 더 누르면 종료됩니다.</string>
+
 </resources>
