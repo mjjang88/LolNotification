@@ -8,10 +8,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_tutorial"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:background="@android:color/black">
+        android:layout_width="match_parent">
 
-        <com.mjjang.lolnotification.widget.OutlineTextView
+        <TextView
             android:id="@+id/text_tutorial_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,10 +25,7 @@
             android:textSize="@dimen/tutorial_font_size"
             android:gravity="center"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:lineSpacingExtra="3dp"
-            app:textStroke="true"
-            app:textStrokeColor="#FFD700"
-            app:textStrokeWidth="3.0"/>
+            android:lineSpacingExtra="3dp"/>
 
         <LinearLayout
             android:id="@+id/layout_tutorial_noti"
@@ -42,7 +38,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:padding="@dimen/margin_normal">
 
-            <com.mjjang.lolnotification.widget.OutlineTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/main_font"
@@ -51,10 +47,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:lineSpacingExtra="3dp"
-                app:textStroke="true"
-                app:textStrokeColor="#FFD700"
-                app:textStrokeWidth="3.0"/>
+                android:lineSpacingExtra="3dp"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -76,7 +69,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:padding="@dimen/margin_normal">
 
-            <com.mjjang.lolnotification.widget.OutlineTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/main_font"
@@ -85,10 +78,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:lineSpacingExtra="3dp"
-                app:textStroke="true"
-                app:textStrokeColor="#FFD700"
-                app:textStrokeWidth="3.0"/>
+                android:lineSpacingExtra="3dp"/>
 
             <ImageView
                 android:layout_width="match_parent"
