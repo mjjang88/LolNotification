@@ -20,12 +20,12 @@ class MatchRepository private constructor(
         refreshMatch()
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //matchDao.getMatchList(LocalDate.now().toString())
-            //matchDao.getMatchList(LocalDate.now().plusMonths(1).toString())
-            if (LocalDate.now().toString() >= "2020-06-17") {
+            matchDao.getMatchList(LocalDate.now().plusMonths(1).toString())
+            /*if (LocalDate.now().toString() >= "2020-06-17") {
                 matchDao.getMatchList(LocalDate.now().toString())
             } else {
                 matchDao.getMatchList("2020-06-17")
-            }
+            }*/
         } else {
             val dateString = SimpleDateFormat("yyyy-MM-dd").format(Date(System.currentTimeMillis()))
             if (dateString >= "2020-06-17") {
