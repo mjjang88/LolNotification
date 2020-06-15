@@ -123,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_recom"
                 android:padding="@dimen/margin_half"
                 android:src="@drawable/ic_youtube_selector"
                 android:background="@null"
@@ -134,12 +134,100 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/btn_youtube_link"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check_recom"
                 android:layout_marginEnd="@dimen/margin_half"
                 android:padding="@dimen/margin_half"
                 android:src="@drawable/ic_naver_selector"
                 android:background="@null"
                 app:isEnabledByLink="@{match.naverLink}"/>
+
+            <LinearLayout
+                android:id="@+id/layout_naver_input_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_team_b">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/naver_link"/>
+
+                <EditText
+                    android:id="@+id/edit_naver_link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:text="@{match.naverLink}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_youtube_input_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_naver_input_link">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/youtube_link"/>
+
+                <EditText
+                    android:id="@+id/edit_youtube_link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:text="@{match.youTubeLink}"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_recom_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_youtube_input_link">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/recom"/>
+
+                <EditText
+                    android:id="@+id/edit_recom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:text="@{match.EditorRecommend}"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_accept"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/accept"/>
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

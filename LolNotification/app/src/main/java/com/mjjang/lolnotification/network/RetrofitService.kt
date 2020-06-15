@@ -29,4 +29,9 @@ interface RetrofitService {
     @GET("/match/matchid/{matchId}/decnotrecom")
     fun decreaseNotRecomCount(@Path("matchId") matchId : String?
     ): Call<Match>
+
+    @FormUrlEncoded
+    @PATCH("/match/matchid/{matchId}")
+    fun updateMatchData(@Path("matchId") matchId: String?, @Field("YouTubeLink") youtubeLink: String?, @Field("NaverLink") naverLink: String?, @Field("EditorRecommend") EditorRecommend: Int
+    ): Call<Match>
 }

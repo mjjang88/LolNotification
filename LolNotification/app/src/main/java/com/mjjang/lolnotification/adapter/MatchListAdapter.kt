@@ -130,6 +130,17 @@ class MatchListAdapter() : ListAdapter<Match, RecyclerView.ViewHolder>(MatchDiff
                     )
                 }
             }
+
+            binding.btnAccept.setOnClickListener {
+                binding.match?.let {
+                    RetrofitProc.updateMatchData(
+                        it.id,
+                        binding.editYoutubeLink.text.toString(),
+                        binding.editNaverLink.text.toString(),
+                        binding.editRecom.text.toString()
+                    )
+                }
+            }
         }
 
         fun bind(item: Match) {
