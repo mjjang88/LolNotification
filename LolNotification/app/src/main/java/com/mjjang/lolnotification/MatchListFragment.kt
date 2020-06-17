@@ -13,6 +13,7 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.RecyclerView
 import com.mjjang.lolnotification.adapter.MatchListAdapter
 import com.mjjang.lolnotification.databinding.FragmentMatchListBinding
+import com.mjjang.lolnotification.network.RetrofitProc
 import com.mjjang.lolnotification.utilities.InjectorUtils
 import com.mjjang.lolnotification.viewmodels.MatchListViewModel
 
@@ -59,6 +60,11 @@ class MatchListFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        RetrofitProc.refreshMatch()
     }
 
     class RecyclerViewDecoration(

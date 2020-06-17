@@ -17,7 +17,6 @@ class MatchRepository private constructor(
     private val matchDao: MatchDao
 ) {
     fun getMatchList() : LiveData<List<Match>> {
-        refreshMatch()
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //matchDao.getMatchList(LocalDate.now().toString())
             //matchDao.getMatchList(LocalDate.now().plusMonths(1).toString())
@@ -45,20 +44,5 @@ class MatchRepository private constructor(
             instance ?: synchronized(this) {
                 instance ?: MatchRepository(matchDao).also { instance = it }
             }
-    }
-
-    private fun refreshMatch() {
-        LolNotiDBRetrofit.getService().requestMatch().enqueue(object : Callback<List<Match>> {
-            override fun onFailure(call: Call<List<Match>>, t: Throwable) {
-            }
-
-            override fun onResponse(call: Call<List<Match>>, response: Response<List<Match>>) {
-                if (response.isSuccessful) {
-                    GlobalScope.launch {
-                        response.body()?.let { matchDao.insertAll(it) }
-                    }
-                }
-            }
-        })
     }
 }
